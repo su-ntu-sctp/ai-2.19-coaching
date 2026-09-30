@@ -66,7 +66,7 @@ Leave the rest of the file as it is. The "Expo has changed" section in particula
 
 ### Context to give Copilot first
 
-Open `App.js` in the editor so it is part of Copilot's active context, then start a new Agent mode conversation with this framing prompt:
+Open `App.js` in the editor so it is part of Copilot's active context, then start a new Agent mode chat with this framing prompt:
 
 ```text
 I'm working on a React Native Expo app called Dogstagram. Right now App.js is a
@@ -130,6 +130,8 @@ Copilot should propose a plan naming the same files listed in [lesson.md](./less
 
 ### Context to give Copilot first
 
+Start a new Agent mode chat, then send this context prompt:
+
 ```text
 AddDogScreen currently just renders placeholder text. I want to build it out
 to let the user pick a dog photo from their library or take a new one with the
@@ -191,6 +193,8 @@ Copilot should install `expo-image-picker`, edit `app.json`'s `plugins` array, a
 
 ### Context to give Copilot first
 
+Start a new Agent mode chat, then send this context prompt:
+
 ```text
 AddDogScreen now navigates to the MyDogs tab with a route param called `dog`
 containing an image URI. MyDogsScreen is still a stub. There is no backend for
@@ -236,6 +240,8 @@ This activity works the same way it does in the code-along path: attempt it with
 
 ### The prompt
 
+Start a new Agent mode chat, then send this prompt:
+
 ```text
 ExploreScreen has a FlatList of dog photos and a flatListRef used to scroll to
 the bottom. Currently, onContentSizeChange={scrollToEnd} forces a scroll to
@@ -262,7 +268,7 @@ any items yet.
 
 ## Part 4: Authentication Flow with Biometric Login
 
-This part is larger, so it is worth using the explore-plan-implement-verify sequence explicitly rather than a single combined prompt. Run Steps 1 to 3 in the same chat, since Step 2 builds on the plan approved in Step 1.
+This part is larger, so it is worth using the explore-plan-implement-verify sequence explicitly rather than a single combined prompt. Start a new Agent mode chat for Part 4, then run Steps 1 to 3 in that chat, since Step 2 builds on the plan approved in Step 1.
 
 ### Step 1: Explore and plan
 
@@ -360,7 +366,7 @@ EAS Build involves account setup and interactive terminal prompts that Copilot c
 
 ### Where to ask Copilot for help
 
-Before running any commands, if anything in this part is unclear:
+Before running any commands, if anything in this part is unclear, start a new Agent mode chat and ask:
 
 ```text
 Explain what EAS Build does, why the project needs to be inside a git
@@ -416,7 +422,7 @@ follow-up question, or something else.
 
 ## Bonus Challenges (Agent path)
 
-Attempt these using the same explore-plan-implement-verify approach as Part 4, rather than a single one-shot prompt:
+Attempt these using the same explore-plan-implement-verify approach as Part 4, rather than a single one-shot prompt. Start a new Agent mode chat for each challenge:
 
 1. Ask Copilot to add haptic feedback to the Save button on AddDogScreen using `expo-haptics`, matching the package already used in Lesson 2.18.
 2. Ask Copilot to plan, then implement, persisting the login session with `expo-secure-store` instead of leaving it in memory. Require the plan to explain why `expo-secure-store` is appropriate here and `AsyncStorage` is not.
